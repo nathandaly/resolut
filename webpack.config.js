@@ -16,11 +16,14 @@ Encore
 
     // will output as web/build/app.js
     .addEntry('js/main', './assets/js/main.js')
-    .addEntry('js/slider-styles', './assets/js/slider-styles.js')
-    .addEntry('js/slider-scripts', './assets/js/slider-scripts.js')
+    // .addEntry('js/slider-styles', './assets/js/slider-styles.js')
+    // .addEntry('js/slider-scripts', './assets/js/slider-scripts.js')
 
     .addPlugin(new CopyWebpackPlugin([
+        {from: './assets/css', to: 'css'},
+        {from: './assets/fonts', to: 'fonts'},
         {from: './assets/images', to: 'images'},
+        {from: './assets/js', to: 'js'},
         {from: './assets/plugins', to: 'plugins'}
     ]))
 

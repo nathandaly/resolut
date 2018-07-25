@@ -1,0 +1,53 @@
+version: '3.1'
+services:
+  mysql:
+    image: mariadb:latest
+    container_name: dev_db
+    ports:
+      - "3306:3306"
+    env_file:
+      - build/.env
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  php:
+    build: build/php-fpm
+    ports:
+        - '9002:9000'
+    container_name: dev_app
+    volumes:
+      - ../:/var/www/html:consistent
+      - ./log:/var/www/html/var/log:cached
+      - ./log/:/srv/log:cached
+    environment:
+      XDEBUG_CONFIG: "remote_enable=1 remote_host=192.168.1.126"
+      PHP_IDE_CONFIG: "serverName=local.dev"
+    links:
+      - mysql
+      - redis
+    depends_on:
+      - redis
+
+  nginx:
+    build: build/nginx
+    container_name: dev_web
+    ports:
+      - '8080:80'
+    volumes:
+      - ../:/var/www/html:consistent
+      - ./log/nginx/:/var/log/nginx:cached
+    links:
+      - php
+
+  redis:
+    image: redis:latest
+    command: ["redis-server", "--appendonly", "yes"]
+    hostname: localhost
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis-data:/data
+
+volumes:
+  mysql-data:
+  redis-data:

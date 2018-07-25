@@ -1,9 +1,5 @@
 "use strict";
 
-var WOW = require('wow.js/dist/wow');
-var lightbox = require('../plugins/lightbox2-master/dist/js/lightbox');
-var Muuri = require('../plugins/muuri-master/muuri');
-
 // JavaScript Document
 
 ( function( $ )
