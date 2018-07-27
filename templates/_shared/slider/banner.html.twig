@@ -1,0 +1,220 @@
+<style>
+    div#n2-ss-4-{{ banner.id }} .n2-ss-title--small {
+        font-family: 'Roboto', 'Arial';
+        color: #ffffff;
+        font-size: 300%;
+        text-shadow: none;
+        line-height: 1;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        text-align: center;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-shadow: 0 2px 4.8px rgba(0, 0, 0, 0.3);
+        font-family: "Agency FB";
+    }
+
+    div#n2-ss-4-{{ banner.id }} .n2-ss-title--large {
+        font-family: 'Roboto', 'Arial';
+        color: #ffffff;
+        font-size: 600%;
+        text-shadow: none;
+        line-height: 1;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        text-align: center;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-shadow: 0 2px 4.8px rgba(0, 0, 0, 0.3);
+        font-family: "Agency FB";
+    }
+
+    div#n2-ss-4-{{ banner.id }} .n2-ss-heading {
+        background: #ffffff;
+        background: RGBA(255, 255, 255, 0);
+        opacity: 1;
+        padding: 0px 0px 0px 0px;
+        box-shadow: none;
+        border-width: 0px;
+        border-style: solid;
+        border-color: #000000;
+        border-color: RGBA(0, 0, 0, 1);
+        border-radius: 0px;
+    }
+
+    div#n2-ss-4-{{ banner.id }} .n2-ss-paragraph {
+        font-family: 'Roboto', 'Arial';
+        color: #ffffff;
+        font-size: 87.5%;
+        text-shadow: none;
+        line-height: 1.5;
+        font-weight: normal;
+        font-style: normal;
+        text-decoration: none;
+        text-align: center;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-shadow: 0 2px 4.8px rgba(0, 0, 0, 0.3);
+    }
+
+    div#n2-ss-4-{{ banner.id }} .n2-ss-paragraph a,
+    div#n2-ss-4-{{ banner.id }} .n2-ss-paragraph a:FOCUS {
+        font-family: 'Roboto', 'Arial';
+        color: #1890d7;
+        font-size: 100%;
+        text-shadow: none;
+        line-height: 1.5;
+        font-weight: normal;
+        font-style: normal;
+        text-decoration: none;
+        text-align: center;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+    }
+
+    div#n2-ss-4-{{ banner.id }} .n2-ss-paragraph a:HOVER,
+    div#n2-ss-4-{{ banner.id }} .n2-ss-paragraph a:ACTIVE {
+        font-family: 'Roboto', 'Arial';
+        color: #1890d7;
+        font-size: 100%;
+        text-shadow: none;
+        line-height: 1.5;
+        font-weight: normal;
+        font-style: normal;
+        text-decoration: none;
+        text-align: center;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+    }
+
+    div#n2-ss-4-{{ banner.id }} .n2-ss-link a {
+        font-family: 'Roboto', 'Arial';
+        color: {{ banner.buttonFgColour }};
+        font-size: 87.5%;
+        text-shadow: none;
+        line-height: 1.5;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        text-align: center;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-radius: 10px;
+        box-shadow: 0 2px 4.8px 0.3px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-out;
+    }
+
+    div#n2-ss-4-{{ banner.id }} .n2-ss-link a:HOVER,
+    div#n2-ss-4-{{ banner.id }} .n2-ss-link a:ACTIVE,
+    div#n2-ss-4-{{ banner.id }} .n2-ss-link a:FOCUS {
+        color: {{ banner.buttonFgHoverColour }};
+    }
+
+    div#n2-ss-4-{{ banner.id }} .n2-ss-link--label {
+        background: {{ banner.buttonBgColour }};
+        opacity: 1;
+        padding: 19px 50px 19px 50px;
+        box-shadow: none;
+        border-width: 0px;
+        border-style: solid;
+        border-color: #000000;
+        border-color: RGBA(0, 0, 0, 1);
+        border-radius: 0px;
+        transition: all 0.3s ease-out;
+    }
+
+    div#n2-ss-4-{{ banner.id }} .n2-ss-link--label:Hover,
+    div#n2-ss-4-{{ banner.id }} .n2-ss-link--label:ACTIVE,
+    div#n2-ss-4-{{ banner.id }} .n2-ss-link--label:FOCUS {
+        background: {{ banner.buttonBgHoverColour }};
+    }
+</style>
+
+<div id="n2-ss-4-{{ banner.id }}" {% if first == true %}data-first="1"{% endif %} data-slide-duration="0" data-id="{{ banner.id }}" style="" class="n2-ss-slide n2-ss-canvas n2-ow  n2-ss-slide-{{ banner.id }}">
+    <div class="n2-ss-slide-background n2-ow" data-mode="fill">
+        <img data-hash="7f12344252192edee35072e997e65114" data-desktop="{{ banner.imageUrl }}" data-blur="0"
+             data-opacity="100" data-x="50" data-y="50" src="{{ banner.imageUrl }}"
+             alt="" />
+    </div>
+    <div class="n2-ss-layers-container n2-ow" data-csstextalign="center" style="">
+        <div class="n2-ss-layer n2-ow" style="overflow:visible;" data-csstextalign="inherit" data-has-maxwidth="0" data-desktopportraitmaxwidth="0"
+             data-cssselfalign="inherit" data-desktopportraitselfalign="inherit" data-pm="content"
+             data-desktopportraitpadding="140|*|10|*|10|*|10|*|px+" data-desktopportraitinneralign="inherit"
+             data-sstype="content" data-hasbackground="0" data-rotation="0" data-desktopportrait="1"
+             data-desktoplandscape="1" data-tabletportrait="1" data-tabletlandscape="1" data-mobileportrait="1"
+             data-mobilelandscape="1" data-adaptivefont="1" data-desktopportraitfontsize="100"
+             data-plugin="rendered">
+            <div class="n2-ss-section-main-content n2-ss-layer-content n2-ow" style="padding:8.75em 0.625em 0.625em 0.625em ;" data-verticalalign="center">
+                {% if banner.introduction is not null %}
+                    <div class="n2-ss-layer n2-ow" style="margin:0em 0em 0em 0em ;overflow:visible;" data-pm="normal" data-desktopportraitmargin="0|*|0|*|0|*|0|*|px+"
+                         data-desktopportraitheight="0" data-has-maxwidth="0" data-desktopportraitmaxwidth="0"
+                         data-cssselfalign="inherit" data-desktopportraitselfalign="inherit" data-sstype="layer"
+                         data-rotation="0" data-animations="eyJzcGVjaWFsWmVybyI6MCwiaW4iOlt7Im5hbWUiOiJcdTA0MTdcdTA0MzBcdTA0NDJcdTA0MzVcdTA0M2NcdTA0M2RcdTA0MzVcdTA0M2RcdTA0MzhcdTA0MzUgXHUwNDQxXHUwNDMyXHUwNDM1XHUwNDQwXHUwNDQ1XHUwNDQzIiwib3BhY2l0eSI6MCwieSI6NDAwfV19"
+                         data-desktopportrait="1" data-desktoplandscape="1" data-tabletportrait="1"
+                         data-tabletlandscape="1" data-mobileportrait="1" data-mobilelandscape="1"
+                         data-adaptivefont="0" data-desktopportraitfontsize="100" data-tabletportraitfontsize="80"
+                         data-mobileportraitfontsize="50" data-plugin="rendered">
+
+                        <div class="n2-ss-title--small n2-ow" style="display:block;">{{ banner.introduction }}</div>
+                    </div>
+                {% endif %}
+                <div class="n2-ss-layer n2-ow" style="margin:0em 0em 0em 0em ;overflow:visible;" data-pm="normal" data-desktopportraitmargin="0|*|0|*|0|*|0|*|px+"
+                     data-desktopportraitheight="0" data-has-maxwidth="0" data-desktopportraitmaxwidth="0"
+                     data-cssselfalign="inherit" data-desktopportraitselfalign="inherit" data-sstype="layer"
+                     data-rotation="0" data-animations="eyJzcGVjaWFsWmVybyI6MCwiaW4iOlt7Im5hbWUiOiJcdTA0MTdcdTA0MzBcdTA0NDJcdTA0MzVcdTA0M2NcdTA0M2RcdTA0MzVcdTA0M2RcdTA0MzhcdTA0MzUgXHUwNDQxXHUwNDNiXHUwNDM1XHUwNDMyXHUwNDMwIiwiZGVsYXkiOjAuNSwib3BhY2l0eSI6MCwieCI6NDAwfV19"
+                     data-desktopportrait="1" data-desktoplandscape="1" data-tabletportrait="1"
+                     data-tabletlandscape="1" data-mobileportrait="1" data-mobilelandscape="1"
+                     data-adaptivefont="0" data-desktopportraitfontsize="100" data-tabletportraitfontsize="80"
+                     data-mobileportraitfontsize="50" data-plugin="rendered">
+
+                    <div class="n2-ss-title--large n2-ss-heading n2-ow" style="display:block;">{{ banner.title }}</div>
+                </div>
+                {% if banner.description is not null %}
+                    <div class="n2-ss-layer n2-ow" style="margin:2.5em 0em 0em 0em ;max-width: 955px;overflow:visible;" data-pm="normal" data-desktopportraitmargin="40|*|0|*|0|*|0|*|px+"
+                         data-desktopportraitheight="0" data-has-maxwidth="1" data-desktopportraitmaxwidth="955"
+                         data-cssselfalign="inherit" data-desktopportraitselfalign="inherit" data-sstype="layer"
+                         data-rotation="0" data-animations="eyJzcGVjaWFsWmVybyI6MCwiaW4iOlt7Im5hbWUiOiJCbHVyIiwiZGVsYXkiOjAuOCwib3BhY2l0eSI6MCwibjJibHVyIjoxMH1dfQ=="
+                         data-desktopportrait="1" data-desktoplandscape="1" data-tabletportrait="1"
+                         data-tabletlandscape="1" data-mobileportrait="1" data-mobilelandscape="1"
+                         data-adaptivefont="0" data-desktopportraitfontsize="100" data-tabletportraitfontsize="80"
+                         data-mobileportraitfontsize="90" data-plugin="rendered">
+
+                        <div class="n2-ow n2-ow-all n2-ss-desktop n2-ss-mobile n2-ss-tablet">
+                            <p class="n2-ss-paragraph n2-ow">{{ banner.description }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if banner.buttonLabel is not null and banner.buttonUrl is not null %}
+                    <div class="n2-ss-layer n2-ow" style="margin:3.125em 0em 0em 0em ;overflow:visible;" data-pm="normal" data-desktopportraitmargin="50|*|0|*|0|*|0|*|px+"
+                         data-desktopportraitheight="0" data-has-maxwidth="0" data-desktopportraitmaxwidth="0"
+                         data-cssselfalign="inherit" data-desktopportraitselfalign="inherit" data-sstype="layer"
+                         data-rotation="0" data-animations="eyJzcGVjaWFsWmVybyI6MCwiaW4iOlt7Im5hbWUiOiJcdTA0MTdcdTA0MzBcdTA0NDJcdTA0NDNcdTA0NDVcdTA0MzBcdTA0M2RcdTA0MzhcdTA0MzUgXHUwNDQxXHUwNDNkXHUwNDM4XHUwNDM3XHUwNDQzIiwiZGVsYXkiOjEsIm9wYWNpdHkiOjAsInkiOi00MDB9XX0="
+                         data-desktopportrait="1" data-desktoplandscape="1" data-tabletportrait="1"
+                         data-tabletlandscape="1" data-mobileportrait="1" data-mobilelandscape="1"
+                         data-adaptivefont="0" data-desktopportraitfontsize="100" data-tabletportraitfontsize="80"
+                         data-mobileportraitfontsize="100" data-plugin="rendered">
+
+                        <div class="n2-ss-button-container n2-ow n2-ss-link n2-ss-nowrap">
+                            <a class="n2-ss-link--label n2-ow" href="{{ banner.buttonUrl }}">
+                                <div>
+                                    <div>{{ banner.buttonLabel }}</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

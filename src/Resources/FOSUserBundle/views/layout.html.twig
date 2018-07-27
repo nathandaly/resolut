@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="{{asset('favicon.ico')}}">
+
+        {% block title %}<title>Resolut Gaming</title>{% endblock title %}
+
+        {% block stylesheets %}
+            <!-- Google Fonts -->
+            <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+            <!-- Font Awesome CSS -->
+            <link rel="stylesheet" href="{{ asset('build/fonts/css/font-awesome.min.css') }}" />
+            <!-- Bootstrap-->
+            <link rel="stylesheet" href="{{ asset('build/css/bootstrap.min.css') }}" />
+            <!-- Style -->
+            <link rel="stylesheet" href="{{ asset('build/css/style.css') }}" />
+            <!-- Responsive Style -->
+            <link rel="stylesheet" href="{{ asset('build/css/responsive.css') }}" />
+            <!-- Animate CSS -->
+            <link rel="stylesheet" href="{{ asset('build/plugins/animate.css-master/animate.min.css') }}">
+            <!-- Light Box -->
+            <link href="{{ asset('build/plugins/lightbox2-master/dist/css/lightbox.css') }}" rel="stylesheet">
+            <!-- Video js -->
+            <link href="{{ asset('build/css/video-js.css') }}" rel="stylesheet">
+            <!-- Datapicker -->
+            <link href="{{ asset('build/plugins/jquery-date-range-picker-master/dist/daterangepicker.min.css') }}" rel="stylesheet">
+            <!-- Sliders -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('build/plugins/slick-1.8.0/slick/slick.css') }}" />
+            <link rel="stylesheet" type="text/css" href="{{ asset('build/plugins/slick-1.8.0/slick/slick-theme.css') }}" />
+        {% endblock %}
+
+        {% block javascript_head %}{% endblock %}
+    </head>
+    <body>
+        <!-- PRELOADER START -->
+        <div class="loader-wrapper">
+            <div class='cssload-loader'>
+                <div class='cssload-inner cssload-one'></div>
+                <div class='cssload-inner cssload-two'></div>
+                <div class='cssload-inner cssload-three'></div>
+            </div>
+        </div>
+        <!-- PRELOADER END -->
+
+        <!-- HEADER START -->
+        {% include '_shared/header.html.twig' %}
+
+        <div>
+            {% block fos_user_content %}
+            {% endblock fos_user_content %}
+        </div>
+
+        {% block javascript_body %}
+            <script src="{{ asset('build/js/jquery-3.3.1.min.js') }}"></script>
+            <script src="{{ asset('build/js/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('build/plugins/slick-1.8.0/slick/slick.min.js') }}"></script>
+            <script src="{{ asset('build/plugins/flex-menu/flexmenu.min.js') }}"></script>
+            <script src="{{ asset('build/plugins/jquery-match-height-master/dist/jquery.matchHeight.js') }}"></script>
+            <script src="{{ asset('build/plugins/muuri-master/muuri.js') }}"></script>
+            <script src="{{ asset('build/plugins/vide-0.5.1/dist/jquery.vide.min.js') }}"></script>
+            <script src="{{ asset('build/plugins/paroller.js-master/dist/jquery.paroller.min.js') }}"></script>
+            <script src="{{ asset('build/js/video.js') }}"></script>
+            <script src="{{ asset('build/js/jquery.inview.min.js') }}"></script>
+            <script src="{{ asset('build/js/progressbar.min.js') }}"></script>
+            <script src="{{ asset('build/plugins/lightbox2-master/dist/js/lightbox.js') }}"></script>
+            <script src="{{ asset('build/js/moment.min.js') }}"></script>
+            <script src="{{ asset('build/plugins/jquery-date-range-picker-master/dist/jquery.daterangepicker.min.js') }}"></script>
+            <script src="{{ asset('build/plugins/wow-master/dist/wow.min.js') }}"></script>
+            <script src="{{ asset('build/js/script.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>
