@@ -1,8 +1,12 @@
 sonata_admin:
-    title: 'Sonata Admin'
+    title: 'Resolut Admin'
+    title_logo: build/images/logo_icon.png
     dashboard:
         blocks:
             - { type: sonata.admin.block.admin_list, position: left }
+
+    security:
+        handler: sonata.admin.security.handler.role
 
 sonata_block:
     blocks:

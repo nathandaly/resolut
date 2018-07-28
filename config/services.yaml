@@ -35,5 +35,12 @@ services:
         class: App\Admin\Display\BannerAdmin
         arguments: [~, App\Entity\Banner, ~]
         tags:
-            - { name: sonata.admin, manager_type: orm, group: display, label: Banner }
+            - { name: sonata.admin, manager_type: orm, group: Display, label: Banner }
+        public: true
+
+    admin.user:
+        class: App\Admin\Display\UserAdmin
+        arguments: [~, App\Entity\User, ~]
+        tags:
+        - { name: sonata.admin, manager_type: orm, group: 'Users & Roles', label: User }
         public: true

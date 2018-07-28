@@ -10,6 +10,11 @@ use FOS\UserBundle\Model\User as BaseUser;
  */
 class User extends BaseUser
 {
+    const STATUS = [
+        'ENABLED',
+        'DISABLED'
+    ];
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
