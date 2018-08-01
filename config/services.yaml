@@ -5,6 +5,7 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: 'en'
+    oauth_user_provider.class: App\Security\Core\User\FOSUBUserProvider
 
 services:
     # default configuration for services in *this* file
@@ -42,5 +43,16 @@ services:
         class: App\Admin\Display\UserAdmin
         arguments: [~, App\Entity\User, ~]
         tags:
-        - { name: sonata.admin, manager_type: orm, group: 'Users & Roles', label: User }
+            - { name: sonata.admin, manager_type: orm, group: 'Users & Roles', label: User }
         public: true
+
+    oauth_aware.user_provider.service:
+        class: "%oauth_user_provider.class%"
+        #this is the place where the properties are passed to the UserProvider - see config.yml
+        arguments: ['@fos_user.user_manager', { facebook: facebookId }]
+
+    App\EventListener\SecurityListener:
+        arguments: ['@router', '@security.authorization_checker', '@event_dispatcher']
+        tags:
+            - { name: 'kernel.event_listener', event: 'security.interactive_login' }
+

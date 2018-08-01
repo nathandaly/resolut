@@ -18,10 +18,10 @@ trait EntityCreatedUpdatedTrait
 
     /**
      * Set createdAt.
-     * @param \DateTime $createdAt
+     * @param \DateTimeInterface $createdAt
      * @return $this
      */
-    public function setCreatedAt($createdAt): self
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
         $this->createdAt = $createdAt;
 
@@ -30,19 +30,19 @@ trait EntityCreatedUpdatedTrait
 
     /**
      * Get createdAt.
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
-    public function getCreatedAt()
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
      * Set updatedAt.
-     * @param \DateTime $updatedAt
+     * @param \DateTimeInterface $updatedAt
      * @return $this
      */
-    public function setUpdatedAt($updatedAt): self
+    public function setUpdatedAt(\DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
 
@@ -51,9 +51,9 @@ trait EntityCreatedUpdatedTrait
 
     /**
      * Get updatedAt.
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
-    public function getUpdatedAt()
+    public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
     }

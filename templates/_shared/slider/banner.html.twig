@@ -166,7 +166,7 @@
                          data-adaptivefont="0" data-desktopportraitfontsize="100" data-tabletportraitfontsize="80"
                          data-mobileportraitfontsize="50" data-plugin="rendered">
 
-                        <div class="n2-ss-title--small n2-ow" style="display:block;">{{ banner.introduction }}</div>
+                        <div class="n2-ss-title--small n2-ow" style="display:block;">{{ banner.introduction|raw }}</div>
                     </div>
                 {% endif %}
                 <div class="n2-ss-layer n2-ow" style="margin:0em 0em 0em 0em ;overflow:visible;" data-pm="normal" data-desktopportraitmargin="0|*|0|*|0|*|0|*|px+"
@@ -178,7 +178,7 @@
                      data-adaptivefont="0" data-desktopportraitfontsize="100" data-tabletportraitfontsize="80"
                      data-mobileportraitfontsize="50" data-plugin="rendered">
 
-                    <div class="n2-ss-title--large n2-ss-heading n2-ow" style="display:block;">{{ banner.title }}</div>
+                    <div class="n2-ss-title--large n2-ss-heading n2-ow" style="display:block;">{{ banner.title|raw }}</div>
                 </div>
                 {% if banner.description is not null %}
                     <div class="n2-ss-layer n2-ow" style="margin:2.5em 0em 0em 0em ;max-width: 955px;overflow:visible;" data-pm="normal" data-desktopportraitmargin="40|*|0|*|0|*|0|*|px+"
@@ -191,7 +191,7 @@
                          data-mobileportraitfontsize="90" data-plugin="rendered">
 
                         <div class="n2-ow n2-ow-all n2-ss-desktop n2-ss-mobile n2-ss-tablet">
-                            <p class="n2-ss-paragraph n2-ow">{{ banner.description }}</p>
+                            <p class="n2-ss-paragraph n2-ow">{{ banner.description|raw }}</p>
                         </div>
                     </div>
                 {% endif %}

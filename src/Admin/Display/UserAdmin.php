@@ -8,6 +8,7 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\CoreBundle\Form\Type\BooleanType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class UserAdmin extends AbstractAdmin
@@ -30,6 +31,7 @@ class UserAdmin extends AbstractAdmin
             ->with('General')
                 ->add('username')
                 ->add('email')
+                ->add('lastLogin')
             ->end()
             // .. more info
         ;
@@ -45,10 +47,9 @@ class UserAdmin extends AbstractAdmin
                 ->add('username')
                 ->add('email')
                 ->add('plainPassword', TextType::class, [
-                    'required' => false]
-                )
+                    'required' => false
+                ])
             ->end()
-            // .. more info
         ;
 
         $formMapper->with('Management');
@@ -66,19 +67,11 @@ class UserAdmin extends AbstractAdmin
                     'multiple' => true,
                     'sortable' => true,
                     'required' => false
-                ]);
-            ;
-        }
-
-        if (!$currentLoggedInUser->hasRole('ROLE_SUPER_ADMIN') && $this->getSubject()->hasRole('ROLE_SUPER_ADMIN')) {
-            $formMapper
+                ])
                 ->add('enabled', BooleanType::class, [
                     'required' => false
                 ])
-            ;
-        } elseif ($currentLoggedInUser->hasRole('ROLE_SUPER_ADMIN')) {
-            $formMapper
-                ->add('enabled', BooleanType::class, [
+                ->add('confirmationToken', TextType::class, [
                     'required' => false
                 ])
             ;
@@ -97,6 +90,7 @@ class UserAdmin extends AbstractAdmin
             ->add('email')
             ->add('enabled', null, array('editable' => true))
             ->add('locked', null, array('editable' => true))
+            ->add('userProfile')
             ->add('createdAt')
         ;
 
@@ -105,5 +99,15 @@ class UserAdmin extends AbstractAdmin
                 ->add('impersonating', 'string', array('template' => 'SonataUserBundle:Admin:Field/impersonating.html.twig'))
             ;
         }
+
+        $listMapper
+            ->add('_action', null, [
+                'actions' => [
+                    'show'   => [],
+                    'edit'   => [],
+                    'delete' => [],
+                ],
+            ])
+        ;
     }
 }

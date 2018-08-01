@@ -13,6 +13,8 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class BannerAdmin extends AbstractAdmin
 {
+    public $supportsPreviewMode = true;
+
     /**
      * {@inheritdoc}
      */
@@ -104,6 +106,13 @@ class BannerAdmin extends AbstractAdmin
             ])
             ->add('buttonFgHoverColour', 'text', [
                 'editable' => true
+            ])
+            ->add('_action', null, [
+                'actions' => [
+                    'show'   => [],
+                    'edit'   => [],
+                    'delete' => [],
+                ],
             ])
         ;
     }

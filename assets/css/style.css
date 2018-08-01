@@ -2040,7 +2040,7 @@ footer.footer {
     border: none;
     border-radius: 10px;
     background: #292845;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-style: italic;
     font-size: 14px;
     outline: none;

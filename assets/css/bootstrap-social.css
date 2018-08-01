@@ -1,0 +1,11 @@
+.btn.btn-facebook {
+    background: #3b5998;
+}
+
+.btn.btn-facebook:hover {
+    background: #355088;
+}
+
+.btn.btn-social:hover {
+    color: #fff;
+}

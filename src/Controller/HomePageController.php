@@ -23,7 +23,7 @@ class HomePageController extends Controller
     }
 
     /**
-     * @Route("/", name="home_page.")
+     * @Route("/", name="home_page.index")
      */
     public function index()
     {

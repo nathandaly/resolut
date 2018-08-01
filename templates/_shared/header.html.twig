@@ -119,8 +119,9 @@
                                 </button>
                             </form>
                         </div>
-                        <a href="/login" class="btn header-btn ml25 color-white hidden-sm hidden-xs">
-                            Sign in
+
+                        <a href="/{% if app.user is null %}login{% else %}logout{% endif %}" class="btn header-btn ml25 color-white hidden-sm hidden-xs">
+                            Sign {% if app.user is null %}in{% else %}out{% endif %}
                         </a>
                     </div>
                 </div>

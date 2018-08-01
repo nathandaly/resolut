@@ -8,6 +8,14 @@
                     <h3>Sign in</h3>
                     {% trans_default_domain 'FOSUserBundle' %}
 
+                    <div class="mt10">
+                        <a class="btn btn-block mt30 color-white color-white plr50 ptb19 btn-social btn-facebook" href="{{ url("hwi_oauth_service_redirect", {service: "facebook"}) }}">
+                            <span class="fa fa-facebook"></span> Sign in with Facebook
+                        </a>
+                    </div>
+
+                    <hr />
+
                     {% if error %}
                         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                     {% endif %}
