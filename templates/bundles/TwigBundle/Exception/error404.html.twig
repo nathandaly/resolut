@@ -1,0 +1,12 @@
+{% extends 'exception_base.html.twig' %}
+
+{% set error_page = '404' %}
+{% set error_background = 'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-13401.jpg' %}
+{% set error_image = asset('build/images/404/404-img.png') %}
+{% set error_title = 'OOPS, NOT FOUND!' %}
+{% set error_content = 'Think you\'ve taken a wrong turn' %}
+
+{% block body %}
+    {{ parent() }}
+{% endblock %}
+

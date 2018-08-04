@@ -1,0 +1,11 @@
+{% extends 'exception_base.html.twig' %}
+
+{% set error_page = '500' %}
+{% set error_background = 'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-13401.jpg' %}
+{% set error_image = '' %}
+{% set error_title = 'OOPS, SOMETHING WENT WRONG!' %}
+{% set error_content = 'There has been an unexpected issue' %}
+
+{% block body %}
+    {{ parent() }}
+{% endblock %}

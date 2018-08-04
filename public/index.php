@@ -32,8 +32,20 @@ if ($trustedHosts = $_SERVER['TRUSTED_HOSTS'] ?? false) {
     Request::setTrustedHosts(explode(',', $trustedHosts));
 }
 
-$kernel = new Kernel($env, $debug);
-$request = Request::createFromGlobals();
-$response = $kernel->handle($request);
-$response->send();
-$kernel->terminate($request, $response);
+if ($env !== 'dev') {
+    try {
+        $kernel = new Kernel($env, $debug);
+        $request = Request::createFromGlobals();
+        $response = $kernel->handle($request);
+        $response->send();
+        $kernel->terminate($request, $response);
+    } catch (\Exception $exception) {
+        echo $exception->getMessage();
+    }
+} else {
+    $kernel = new Kernel($env, $debug);
+    $request = Request::createFromGlobals();
+    $response = $kernel->handle($request);
+    $response->send();
+    $kernel->terminate($request, $response);
+}
